@@ -6,6 +6,7 @@
 package App;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -68,8 +69,8 @@ public class WebApp {
             lista.add(num);
         }
 
-        Gson g = new Gson();
-        return g.toJson(lista);
+        Gson g = new GsonBuilder().setPrettyPrinting().create();
+        return g.toJson(lista, ArrayList.class);
 
     }
 
