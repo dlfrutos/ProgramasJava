@@ -1,0 +1,12 @@
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/test_osgi/FelixHost.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/integrator/Activator.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/test_osgi/FrameworkErrorListener.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/CompatibilityAssertionTest.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/StringPrintStream.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/issues/Issue324Test.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/MultiBindingAssertionTest.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/VersionMismatchAssertionTest.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/IncompatibleMultiBindingAssertionTest.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/test_osgi/CheckingBundleListener.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/test_osgi/BundleTest.java
+/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/src/test/java/org/slf4j/MissingSingletonMethodAssertionTest.java

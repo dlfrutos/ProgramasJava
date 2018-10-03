@@ -1,0 +1,7 @@
+Testsuite: org.slf4j.CompatibilityAssertionTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.043 sec
+------------- Standard Error -----------------
+2 [main] INFO org.slf4j.CompatibilityAssertionTest - hello world 1409
+------------- ---------------- ---------------
+
+Testcase: test took 0.037 sec

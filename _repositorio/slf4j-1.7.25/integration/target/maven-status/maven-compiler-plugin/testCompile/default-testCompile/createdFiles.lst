@@ -1,0 +1,12 @@
+org/slf4j/MissingSingletonMethodAssertionTest.class
+org/slf4j/MultiBindingAssertionTest.class
+org/slf4j/test_osgi/FelixHost.class
+org/slf4j/test_osgi/FrameworkErrorListener.class
+org/slf4j/issues/Issue324Test.class
+org/slf4j/test_osgi/BundleTest.class
+integrator/Activator.class
+org/slf4j/test_osgi/CheckingBundleListener.class
+org/slf4j/CompatibilityAssertionTest.class
+org/slf4j/StringPrintStream.class
+org/slf4j/IncompatibleMultiBindingAssertionTest.class
+org/slf4j/VersionMismatchAssertionTest.class

@@ -26,9 +26,9 @@ import java.util.concurrent.TimeoutException;
  * @author hook
  */
 public class ReceptorSub {
-    private static String USER = "mqadmin";
-    private static String PASSWD = "mqadmin";
-    private static String HOST = "192.168.1.41";
+    private static String USER = "guest";
+    private static String PASSWD = "guest";
+    private static String HOST = "localhost";
     private Connection connection = null;
     private Channel channel = null;
     private Chat chat = null;

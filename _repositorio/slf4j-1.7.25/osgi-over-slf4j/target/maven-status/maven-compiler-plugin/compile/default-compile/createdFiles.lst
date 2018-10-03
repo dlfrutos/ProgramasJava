@@ -1,0 +1,3 @@
+org/slf4j/osgi/logservice/impl/LogServiceFactory.class
+org/slf4j/osgi/logservice/impl/Activator.class
+org/slf4j/osgi/logservice/impl/LogServiceImpl.class

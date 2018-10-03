@@ -1,0 +1,5 @@
+org/apache/log4j/Trivial.class
+org/apache/log4j/NDCTest.class
+org/dummy/ListHandler.class
+org/dummy/Bug139.class
+org/dummy/Bug131.class

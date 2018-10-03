@@ -1,0 +1,3 @@
+org/slf4j/bridge/SLF4JBridgeHandlerTest.class
+org/slf4j/bridge/SLF4JBridgeHandlerPerfTest.class
+org/slf4j/bridge/ListAppender.class

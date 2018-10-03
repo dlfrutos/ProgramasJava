@@ -1,0 +1,8 @@
+org/slf4j/impl/VersionUtil.class
+org/slf4j/impl/StaticMDCBinder.class
+org/apache/log4j/MDCFriend.class
+org/slf4j/impl/Log4jLoggerAdapter.class
+org/slf4j/impl/Log4jMDCAdapter.class
+org/slf4j/impl/StaticMarkerBinder.class
+org/slf4j/impl/Log4jLoggerFactory.class
+org/slf4j/impl/StaticLoggerBinder.class

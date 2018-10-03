@@ -1,0 +1,9 @@
+org/slf4j/Square.class
+org/slf4j/InvocationTest.class
+org/slf4j/impl/SimpleLoggerTest.class
+org/slf4j/helpers/SimpleLoggerMultithreadedInitializationTest$StringPrintStream.class
+org/slf4j/DetectLoggerNameMismatchTest.class
+org/slf4j/helpers/SimpleLoggerMultithreadedInitializationTest.class
+org/slf4j/SilentPrintStream.class
+org/slf4j/LoggerFactoryFriend.class
+org/slf4j/ShapeBase.class

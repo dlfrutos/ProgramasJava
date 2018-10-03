@@ -1,0 +1,9 @@
+Testsuite: org.slf4j.MissingSingletonMethodAssertionTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.032 sec
+------------- Standard Error -----------------
+SLF4J: slf4j-api 1.6.x (or later) is incompatible with this binding.
+SLF4J: Your binding is version 1.5.5 or earlier.
+SLF4J: Upgrade your binding to version 1.6.x.
+------------- ---------------- ---------------
+
+Testcase: test took 0.025 sec

@@ -1,0 +1,5 @@
+org/slf4j/impl/StaticMarkerBinder.class
+org/slf4j/impl/StaticMDCBinder.class
+org/slf4j/impl/AndroidLoggerFactory.class
+org/slf4j/impl/StaticLoggerBinder.class
+org/slf4j/impl/AndroidLoggerAdapter.class

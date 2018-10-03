@@ -1,0 +1,9 @@
+Testsuite: org.slf4j.VersionMismatchAssertionTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.054 sec
+------------- Standard Error -----------------
+SLF4J: The requested version 1.5.11 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+4 [main] INFO org.slf4j.VersionMismatchAssertionTest - hello world 5669
+------------- ---------------- ---------------
+
+Testcase: test took 0.045 sec
