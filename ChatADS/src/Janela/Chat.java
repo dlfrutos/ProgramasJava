@@ -24,12 +24,13 @@ public class Chat extends javax.swing.JFrame {
      * Creates new form Char
      */
     private static String meuChat = "frutos";
-    private static String chatGeral = "todos";
+    private static String chatGeral = "logs";
 
     private Emissor emissorOneToOne;
     private EmissorSub emissorOneToMany;
     private Receptor receptorOneToOne;
     private ReceptorSub receptorOneToMany;
+    private Chat chat;
 
     public Chat() throws IOException, TimeoutException {
         initComponents();
@@ -83,7 +84,7 @@ public class Chat extends javax.swing.JFrame {
         });
 
         membrosChat.setForeground(new java.awt.Color(255, 255, 255));
-        membrosChat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TODOS", "Aldir", "Bruno", "Fernanda", "Frutos", "Joao", "Julian", "Luciano", "Matheus", "Vinicius", "Wellington", "" }));
+        membrosChat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AMQ", "Aldir", "Bruno", "Fernanda", "Frutos", "Joao", "Julian", "Luciano", "Matheus", "Vinicius", "Wellington", "" }));
         membrosChat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 membrosChatActionPerformed(evt);
@@ -168,16 +169,18 @@ public class Chat extends javax.swing.JFrame {
     }//GEN-LAST:event_membrosChatActionPerformed
 
     private void enviarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarButtonActionPerformed
-
         int index = membrosChat.getSelectedIndex();
         String destinatario = membrosChat.getItemAt(index);
         String mensagem = "[FRUTOS]: " + textoChat.getText();
         textoChat.setText("");
 
+        System.out.println("Index: " + index);
         if (index == 0) {
             try {
                 emissorOneToMany.enviaMen(chatGeral, mensagem);
                 inserirLinha(mensagem, "[TODOS]");
+                System.out.println("Mensagem enviada p/ todos.");
+                //System.out.println("MENSAGEM EOTM: " + mensagem);
             } catch (IOException ex) {
                 Logger.getLogger(Chat.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -193,11 +196,15 @@ public class Chat extends javax.swing.JFrame {
     }//GEN-LAST:event_enviarButtonActionPerformed
 
     public void inserirLinha(String msg, String destinatario) {
+        //System.out.println("MENSAGEM inserirLinha: " + msg);
         this.telaChat.append(msg + "    --|" + destinatario + "|--\n");
+        System.out.println("Inserindo mensagem direta na tela. ");
     }
 
     public void inserirLinhaReceptor(String msg) {
+        //System.out.println("MENSAGEM inserirLinhaReceptor: " + msg);
         this.telaChat.append(msg + "\n");
+        System.out.println("Inserindo mensagem geral na tela. ");
     }
 
     /**
