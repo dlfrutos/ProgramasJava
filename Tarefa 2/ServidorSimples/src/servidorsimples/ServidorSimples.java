@@ -23,6 +23,9 @@ public class ServidorSimples {
                 System.out.println("Aguardando conexão...");
                 Socket socket = listener.accept();
                 System.out.println("Conexão aceita!");
+                
+                
+                
                 try {
                     PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
                     out.println("Servidor: Daniel.");
