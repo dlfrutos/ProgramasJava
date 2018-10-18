@@ -25,60 +25,60 @@ public class Mutex2 {
         public void run() {
             Random r = new Random();
             int n;
-            for (;;) {
-                n=r.nextInt(2000 - 500 + 1) +500;
+            for (int i=0;;i++) {
+                n = r.nextInt(3000 - 500 + 1) + 500;
                 try {
-                    System.out.println(name + " : aguardando recurso...");
-                    // System.out.println(name + " : available Semaphore permits now: "
-                    // + semaphore.availablePermits());
-
+                    Thread.sleep(n);
+                    System.out.println("Solicitação >> \t" + name + " solicitação de recurso #"+i+ " \t" + java.time.LocalTime.now().toString());
                     semaphore.acquire();
-                    //System.out.println(name + " : got the permit!");
-
                     try {
-                        //System.out.println(name + " : está utilizando o recurso.");
-                        lista.add(name + "usando recurso" + java.time.LocalDateTime.now().toString());
-                        System.out.println(name + " usando recurso em " + java.time.LocalDateTime.now().toString());
-                        // sleep 1 second
+                        lista.add(name + "completando requisição #"+i +" "+ java.time.LocalDateTime.now().toString());
+                        System.out.println("Execução >> \t"+name + " completando requisição #"+i +" \t"+ java.time.LocalTime.now().toString());
+                        n = r.nextInt(3000 - 500 + 1) + 500;
+
                         Thread.sleep(n);
 
+                    } catch (Exception e) {
+                        System.out.println("  NEGADO");
                     } finally {
-                        // calling release() after a successful acquire()
-                        // System.out.println(name + " : releasing lock...");
                         semaphore.release();
-                        //System.out.println(name + " : available Semaphore permits now: "
-                        //      + semaphore.availablePermits());
                     }
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
+
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        System.out.println("Total available Semaphore permits : "
-                + semaphore.availablePermits());
-
+//        System.out.println("Total available Semaphore permits: "
+//                + semaphore.availablePermits());
         MyLockerThread t1 = new MyLockerThread("App1");
         t1.start();
+        Thread.sleep(700);
 
         MyLockerThread t2 = new MyLockerThread("App2");
         t2.start();
+        Thread.sleep(700);
 
         MyLockerThread t3 = new MyLockerThread("App3");
         t3.start();
+        Thread.sleep(700);
 
         MyLockerThread t4 = new MyLockerThread("App4");
         t4.start();
+        Thread.sleep(700);
 
         MyLockerThread t5 = new MyLockerThread("App5");
         t5.start();
+        Thread.sleep(700);
 
         MyLockerThread t6 = new MyLockerThread("App6");
         t6.start();
+        Thread.sleep(700);
 
     }
 }
