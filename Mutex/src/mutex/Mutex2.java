@@ -1,6 +1,11 @@
 package mutex;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
@@ -12,29 +17,34 @@ public class Mutex2 {
      */
     // max 1 people
     static Semaphore semaphore = new Semaphore(1);
-    static ArrayList<String> lista = new ArrayList<>();
+    static List<String> lista = new ArrayList<>();
 
     static class MyLockerThread extends Thread {
 
         String name = "";
 
-        MyLockerThread(String name) {
+        MyLockerThread(String name) throws IOException {
             this.name = name;
         }
 
         public void run() {
+            PrintWriter w;
             Random r = new Random();
             int n;
-            for (int i=0;;i++) {
+            for (int i = 0;; i++) {
                 n = r.nextInt(3000 - 500 + 1) + 500;
                 try {
                     Thread.sleep(n);
-                    System.out.println("Solicitação >> \t" + name + " solicitação de recurso #"+i+ " \t" + java.time.LocalTime.now().toString());
+                    System.out.println("Solicitação >> \t" + name + " solicitação de recurso #" + i + " \t" + java.time.LocalTime.now().toString());
                     semaphore.acquire();
                     try {
-                        lista.add(name + "completando requisição #"+i +" "+ java.time.LocalDateTime.now().toString());
-                        System.out.println("Execução >> \t"+name + " completando requisição #"+i +" \t"+ java.time.LocalTime.now().toString());
+                        w = new PrintWriter(new FileOutputStream(new File("mutex.txt"),true));
+                        lista.add(name + "completando requisição #" + i + " " + java.time.LocalDateTime.now().toString());
+                        System.out.println("Execução >> \t" + name + " completando requisição #" + i + " \t" + java.time.LocalTime.now().toString());
                         n = r.nextInt(3000 - 500 + 1) + 500;
+                        w.flush();
+                        w.println(name + " completando requisição #" + i + " " + java.time.LocalDateTime.now().toString());
+                        w.close();
 
                         Thread.sleep(n);
 
@@ -52,10 +62,17 @@ public class Mutex2 {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
 
 //        System.out.println("Total available Semaphore permits: "
 //                + semaphore.availablePermits());
+        
+        PrintWriter p = new PrintWriter("mutex.txt");
+        p.println("Log de requisições completas:");
+        p.flush();
+        p.close();
+
+
         MyLockerThread t1 = new MyLockerThread("App1");
         t1.start();
         Thread.sleep(700);
