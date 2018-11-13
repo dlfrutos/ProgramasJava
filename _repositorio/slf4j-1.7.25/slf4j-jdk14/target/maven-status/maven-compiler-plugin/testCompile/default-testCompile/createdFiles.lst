@@ -1,0 +1,12 @@
+org/slf4j/InvocationTest.class
+org/slf4j/InvocationTest$ListHandler.class
+org/slf4j/impl/JDK14AdapterLoggerNameTest$MockHandler.class
+org/slf4j/issue/LoggerSerializationTest$LoggerHolder.class
+org/slf4j/helpers/JDK14MultithreadedInitializationTest.class
+org/slf4j/InvocationTest$1.class
+org/slf4j/LoggerFactoryFriend.class
+org/slf4j/impl/JDK14AdapterLoggerNameTest.class
+org/slf4j/impl/PerfTest.class
+org/slf4j/issue/LoggerSerializationTest.class
+org/slf4j/impl/JDK14AdapterLoggerNameTest$1.class
+org/slf4j/helpers/CountingHandler.class

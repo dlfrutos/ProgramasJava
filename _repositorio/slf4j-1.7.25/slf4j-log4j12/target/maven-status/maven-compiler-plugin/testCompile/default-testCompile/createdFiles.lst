@@ -1,0 +1,7 @@
+org/slf4j/InvocationTest.class
+org/slf4j/impl/RecursiveInitializationTest.class
+org/slf4j/impl/Log4j12MultithreadedInitializationTest.class
+org/slf4j/ListAppender.class
+org/slf4j/impl/RecursiveAppender.class
+org/apache/log4j/MDCFriendTest.class
+org/slf4j/impl/UtilVersionTest.class

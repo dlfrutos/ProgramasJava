@@ -1,0 +1,13 @@
+Testsuite: org.slf4j.IncompatibleMultiBindingAssertionTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.027 sec
+------------- Standard Error -----------------
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/lib/slf4j-simple-1.5.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25/integration/lib/slf4j-nop-1.5.6.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: slf4j-api 1.6.x (or later) is incompatible with this binding.
+SLF4J: Your binding is version 1.5.5 or earlier.
+SLF4J: Upgrade your binding to version 1.6.x.
+------------- ---------------- ---------------
+
+Testcase: test took 0.021 sec

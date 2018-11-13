@@ -1,0 +1,3 @@
+org/slf4j/impl/StaticMarkerBinder.class
+org/slf4j/impl/StaticMDCBinder.class
+org/slf4j/impl/StaticLoggerBinder.class

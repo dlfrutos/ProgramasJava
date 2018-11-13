@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /MTTCliente/nbproject/private/
 /MTTServidor/nbproject/private/
 /MTTServidor/build/
@@ -17,3 +18,25 @@
 /RingElection1/dist/
 /New Folder/RingAlgo/nbproject/private/
 /New Folder/RingAlgo/build/
+=======
+/ChatIFExMateus/nbproject/private/
+/ChatIFExMateus/dist/
+/ChatIFExMateus/build/
+/ChatADS/dist/
+/CalculaDelayServidor/dist/
+/Chat/nbproject/private/
+/Chat/build/
+/Chat/dist/
+/Chat2/nbproject/private/
+/Chat2Servidor/nbproject/private/
+/Chat2Servidor/build/
+/Chat2Servidor/dist/
+/Chat2/build/
+/Chat2/dist/
+/Chat3/nbproject/private/
+/very-simple-swing-chat/nbproject/private/
+/very-simple-swing-chat/build/
+/Mutex/nbproject/private/
+/Mutex/build/
+/Mutex/dist/
+>>>>>>> c2a90fe73ebbd1158af2c2db1e01411175ed436e

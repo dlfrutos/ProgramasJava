@@ -26,30 +26,34 @@ import java.util.concurrent.TimeoutException;
  * @author hook
  */
 public class ReceptorSub {
-    private static String USER = "mqadmin";
-    private static String PASSWD = "mqadmin";
-    private static String HOST = "192.168.1.41";
+
+    private static final String EXCHANGE_NAME = "logs";
+    private static String USER = "guest";
+    private static String PASSWD = "guest";
+    private static String HOST = "localhost";
     private Connection connection = null;
     private Channel channel = null;
     private Chat chat = null;
-    
-    public ReceptorSub(Chat chat) throws IOException, TimeoutException{
+
+    public ReceptorSub(Chat chat) throws IOException, TimeoutException {
         this.chat = chat;
+
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost(HOST);
         factory.setUsername(USER);
-        factory.setPassword(PASSWD);       
-        connection = factory.newConnection();
-        channel = connection.createChannel();
+        factory.setPassword(PASSWD);
+        Connection connection = factory.newConnection();
+        Channel channel = connection.createChannel();
     }
-    
-    public void fechaConn() throws IOException, TimeoutException{
+
+    public void fechaConn() throws IOException, TimeoutException {
         channel.close();
         connection.close();
     }
-    
-    public void recebeMen(String emissor) throws IOException{
-       channel.exchangeDeclare(emissor, BuiltinExchangeType.FANOUT);
+
+    public void recebeMen(String emissor) throws IOException {
+        //System.out.println("iniciando recebimento de mensagem dentro da classe.");
+        channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.FANOUT);
         String queueName = channel.queueDeclare().getQueue();
         channel.queueBind(queueName, emissor, "");
 
@@ -57,12 +61,12 @@ public class ReceptorSub {
         Consumer consumer = new DefaultConsumer(channel) {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope,
-                AMQP.BasicProperties properties, byte[] body) throws IOException {
+                    AMQP.BasicProperties properties, byte[] body) throws IOException {
                 String message = new String(body, "UTF-8");
                 chat.inserirLinhaReceptor(message);
+                System.out.println("Mensagem");
             }
         };
         channel.basicConsume(queueName, true, consumer);
     }
-    
 }

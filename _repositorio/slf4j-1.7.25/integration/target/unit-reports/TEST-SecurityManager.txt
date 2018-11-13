@@ -1,0 +1,7 @@
+Testsuite: org.slf4j.issues.Issue324Test
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.064 sec
+------------- Standard Output ---------------
+currentDir:/home/daniel/Documents/ProgramasJava/_repositorio/slf4j-1.7.25
+------------- ---------------- ---------------
+
+Testcase: testLoggerCreationInPresenseOfSecurityManager took 0.059 sec

@@ -1,0 +1,5 @@
+org/slf4j/InvocationTest.class
+org/slf4j/impl/MultithreadedInitializationTest$StringPrintStream.class
+org/slf4j/LoggerFactoryFriend.class
+org/slf4j/impl/MultithreadedInitializationTest$LoggerAccessingThread.class
+org/slf4j/impl/MultithreadedInitializationTest.class

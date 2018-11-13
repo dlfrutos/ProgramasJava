@@ -23,11 +23,12 @@ import java.util.concurrent.TimeoutException;
  */
 public class EmissorSub {
 
-    private static String USER = "mqadmin";
-    private static String PASSWD = "mqadmin";
-    private static String HOST = "192.168.1.41";
-    private Connection connection = null;
-    private Channel channel = null;
+    private static final String EXCHANGE_NAME = "logs";
+    public final static String USER = "guest";
+    public final static String PASSWD = "guest";
+    public final static String HOST = "localhost";
+    Connection connection;
+    Channel channel;
 //
 
     public EmissorSub() throws IOException, TimeoutException {
@@ -44,10 +45,10 @@ public class EmissorSub {
         channel.close();
         connection.close();
     }
+
     public void enviaMen(String fila, String m) throws UnsupportedEncodingException, IOException {
-        channel.exchangeDeclare(fila, BuiltinExchangeType.FANOUT);
-        channel.basicPublish(fila, "", null, m.getBytes("UTF-8"));
-
+        channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.FANOUT);
+        //channel.exchangeDeclare(fila, "fanout");
+        channel.basicPublish(EXCHANGE_NAME, "", null, m.getBytes("UTF-8"));
     }
-
 }

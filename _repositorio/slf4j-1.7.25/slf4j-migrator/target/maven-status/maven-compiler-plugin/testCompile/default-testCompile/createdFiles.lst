@@ -1,0 +1,15 @@
+org/slf4j/migrator/line/TrivialMatcherTest.class
+org/slf4j/migrator/line/TrivialMatcher.class
+org/slf4j/migrator/line/PackageTest.class
+org/slf4j/migrator/line/NoConversionTest.class
+org/slf4j/migrator/line/Log4jRuleSetTest.class
+org/slf4j/migrator/helper/AbbreviatorTest.class
+org/slf4j/migrator/internal/NopProgressListener.class
+org/slf4j/migrator/helper/PackageTest.class
+org/slf4j/migrator/AternativeApproach.class
+org/slf4j/migrator/ProjectConverterTest.class
+org/slf4j/migrator/line/JCLRuleSetTest.class
+org/slf4j/migrator/FileConverterTest.class
+org/slf4j/migrator/PackageTest.class
+org/slf4j/migrator/AllTest.class
+org/slf4j/migrator/helper/RandomHelper.class
